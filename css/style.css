@@ -1,0 +1,174 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    text-align: center;
+    background-color: #9b8d74d8;
+}
+body {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000 
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+.article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+
+}
+
+.article-content {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 20px;
+}
+
+.featured-article {
+    border: 2px solid #000000;
+    padding: 10px;
+    border-radius: 1%;
+}
+
+.latest-news {
+    border: 2px solid #000000;
+    padding: 10px;
+    border-radius: 1%;
+}
+
+.latest-news a {
+    text-decoration: none;
+    color: black;
+}
+
+.latest-news h3 :hover {
+    color: #60cd1d;
+}
+main { 
+    display: grid; 
+    grid-template-columns: 3fr1 fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    max-width: 100%;
+}
+
+.advertisement {
+    padding: 0px;
+    border: 1px solid #000000;
+    text-align: center;
+    background-color: #ccc;
+    border-radius: 1%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.ad {
+    display: flex;
+    margin: auto;
+    width: auto;
+}
+.ad img {
+    width: 100%;
+}
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(ato-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+
+}
+
+.photo img {
+    width: 80%;
+    height: auto;
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    height: 30px;
+    padding-top: 50px;
+}
+
+.gallery-controls button {
+    width: 70px;
+    border: 1px solid #000000;
+    background-color: #ffffff00;
+    border-radius: 10%;
+    font-family:'Times New Roman', Times, serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0; /*Had to add this because the list items were not properly centered*/
+}
+
+nav ul li :hover{
+    color: #ffffff;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}

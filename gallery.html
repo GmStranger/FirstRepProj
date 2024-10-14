@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="Article Page" href="article.html">
+    <link rel="Photo Gallery" href="gallery.html">
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="photo-gallery">
+        <div class="gallery-controls">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+        <div class="photo"><img src="images/photo1.jpg" alt="Photo of an empty hall leading somewhere"></div>
+        <div class="photo"><img src="images/photo2.jpg" alt="Photo of mushrooms organized in a grid composition"></div>
+        <div class="photo"><img src="images/photo3.jpg" alt="Photo of a building seperated by color and the numbers 35 and 37"></div>
+        <!-- repeat for each photo-->
+    </main>
+    <script>
+        //Assist start
+        const photos = document.querySelectorAll('.photo');
+        let currentPhotoIndex = 0;
+
+     document.getElementById('prev').addEventListener('click', () => {
+            photos[currentPhotoIndex].style.display = 'none';
+            currentPhotoIndex = (currentPhotoIndex - 1 + photos.length) % photos.length;
+            photos[currentPhotoIndex].style.display = 'block';
+        });
+
+        document.getElementById('next').addEventListener('click', () => {
+            photos[currentPhotoIndex].style.display = 'none';
+            currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+            photos[currentPhotoIndex].style.display = 'block';
+        });
+
+        photos.forEach((photo, index) => {
+            if (index !== 0) photo.style.display = 'none';
+        });
+
+    //Assist End
+        document. querySelector('.hamburger').addEventListener('click', function(){
+            document.querySelector('nav ul').classList.toggle('active');
+        })
+    </script>
+    <!--navigation controls will go here-->
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer> 
+        <p>contact us at drodri88@students.kennesaw.edu</p>
+    </footer>
+</body>
+</html>
